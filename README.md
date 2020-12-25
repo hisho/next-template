@@ -3,9 +3,16 @@
 
 ## command
 
-### watch
+### Watch
 
 #### watch when development
 ```shell script
-$ yarn dev
+$ yarn start
+```
+
+### Build
+
+#### Build when production
+```shell script
+$ yarn build
 ```
