@@ -12,6 +12,7 @@
     "next-dev": "next dev",
     "next-build": "next build",
     "next-start": "next start"
+    "server": "browser-sync start --config ./bs-config.js"
   },
   "dependencies": {
     "next": "10.0.4",
