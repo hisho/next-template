@@ -10,6 +10,7 @@
     "start": "run-s next-dev",
     "build": "run-s next-build next-start",
     "serve": "run-s export server",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "export": "run-s next-build next-export",
     "next-dev": "next dev",
     "next-build": "next build",
