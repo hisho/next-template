@@ -1,8 +1,11 @@
-const path = require('path')
+/* eslint-disable
+   @typescript-eslint/no-var-requires
+*/
+const path = require('path');
 
 module.exports = {
-  webpack(config, options) {
-    config.resolve.alias['@src'] = path.join(__dirname, 'src')
-    return config
+  webpack(config) {
+    config.resolve.alias['@src'] = path.join(__dirname, 'src');
+    return config;
   },
-}
+};

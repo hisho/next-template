@@ -1,10 +1,9 @@
-
 type Response = {
-  statusCode: number
-  json(name: { name: string }): void
-}
+  statusCode: number;
+  json(name: { name: string }): void;
+};
 
 export default (_req: void, res: Response): void => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
-}
+  res.statusCode = 200;
+  res.json({ name: 'John Doe' });
+};

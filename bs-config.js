@@ -1,14 +1,11 @@
-const dist = 'out/'
+const dist = 'out/';
 
 const BROWSER_SYNC = {
-  files: [
-    `${dist}_next/**/*`,
-    `${dist}**/*.html`,
-  ],
+  files: [`${dist}_next/**/*`, `${dist}**/*.html`],
   ghostMode: {
     clicks: false,
     scroll: false,
-    forms: false
+    forms: false,
   },
   // open: 'external',
   server: {
@@ -16,7 +13,7 @@ const BROWSER_SYNC = {
     middleware: [],
     // proxy: 'http://127.0.0.1:9999/',
   },
-  logFileChanges: false
+  logFileChanges: false,
 };
 
 module.exports = BROWSER_SYNC;
