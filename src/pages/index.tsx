@@ -1,10 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { SEO } from '@src/components/seo';
-import classes from '@src/styles/Home.module.css';
 
-const a = ayak
-a;
 const Home: NextPage = () => {
   return (
     <>
