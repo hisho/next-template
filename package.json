@@ -9,9 +9,12 @@
     "preinstall": "npx check-engines && npx only-allow yarn",
     "start": "run-s next-dev",
     "build": "run-s next-build next-start",
+    "serve": "run-s export server",
+    "export": "run-s next-build next-export",
     "next-dev": "next dev",
     "next-build": "next build",
-    "next-start": "next start"
+    "next-start": "next start",
+    "next-export": "next export",
     "server": "browser-sync start --config ./bs-config.js"
   },
   "dependencies": {
