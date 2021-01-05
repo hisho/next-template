@@ -2,9 +2,6 @@
   "name": "next-todo",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=14.8.0"
-  },
   "scripts": {
     "start": "run-s next-dev",
     "build": "run-s next-build next-start",
