@@ -1,6 +1,6 @@
 {
-  "name": "next-todo",
-  "version": "0.1.0",
+  "name": "next-template",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "run-s next-dev",
