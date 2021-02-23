@@ -1,12 +1,12 @@
-import React, {useEffect, useContext} from "react";
-import {CounterContext} from "@src/pages/counter/index";
+import React, { useEffect, useContext } from 'react';
+import { CounterContext } from '@src/pages/counter/index';
 
 export const Decrement = () => {
-  const {state, dispatch} = useContext(CounterContext);
+  const { state, dispatch } = useContext(CounterContext);
 
   useEffect(() => {
     console.log('render');
-  }, [state])
+  }, [state]);
 
   return (
     <button
@@ -16,5 +16,5 @@ export const Decrement = () => {
     >
       -
     </button>
-  )
-}
+  );
+};

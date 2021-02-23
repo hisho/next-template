@@ -1,4 +1,4 @@
 export type todoType = {
-  id: number,
-  todo: string
-}
+  id: number;
+  todo: string;
+};
