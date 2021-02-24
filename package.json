@@ -2,7 +2,11 @@
   "name": "next-template",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=12.13.0"
+  },
   "scripts": {
+    "preinstall": "npx check-engines && npx only-allow npm",
     "start": "run-s next-dev",
     "build": "run-s next-build next-start",
     "serve": "run-s export server",
