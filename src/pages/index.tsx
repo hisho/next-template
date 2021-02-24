@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { SEO } from '@src/components/seo';
+import { SEO } from '@src/layouts';
 
 const IndexPage: NextPage = () => {
   return (
