@@ -1,5 +1,5 @@
 # NEXT TEMPLATE
-# NODE VERSION >=14.8.0 AND USE YARN
+# NODE VERSION >=12.13.0 AND USE NPM
 
 ## command
 
@@ -8,13 +8,13 @@
 #### watch when development
 
 ```shell script
-$ yarn start
+$ npm start
 ```
 
 #### watch when SSG
 
 ```shell script
-$ yarn serve
+$ npm run serve
 ```
 
 ### Build
@@ -24,11 +24,11 @@ $ yarn serve
 ### build when SSR
 
 ```shell script
-$ yarn build
+$ npm run build
 ```
 
 #### build when SSG
 
 ```shell script
-$ yarn export
+$ npm run export
 ```
