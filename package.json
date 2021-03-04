@@ -8,11 +8,12 @@
   },
   "scripts": {
     "preinstall": "npx check-engines && npx only-allow npm",
-    "start": "run-s next-dev",
+    "start": "run-p next-dev open",
     "build": "run-s next-build next-start",
     "serve": "run-s export server",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore . --fix",
     "export": "run-s next-build next-export",
+    "open": "open http://localhost:3000",
     "next-dev": "next dev",
     "next-build": "next build",
     "next-start": "next start",
