@@ -32,3 +32,8 @@ $ npm run build
 ```shell script
 $ npm run export
 ```
+
+## License
+
+[MIT © hisho](./LICENSE)
+s
