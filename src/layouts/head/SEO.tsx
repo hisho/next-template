@@ -6,7 +6,7 @@ type SEOPropsType = Readonly<{
   description: string;
 }>;
 
-export const SEO: FC<SEOPropsType> = ({ title, description, children}) => {
+export const SEO: FC<SEOPropsType> = ({ title, description, children }) => {
   return (
     <>
       <Head>
