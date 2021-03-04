@@ -18,7 +18,8 @@
     "next-build": "next build",
     "next-start": "next start",
     "next-export": "next export",
-    "server": "browser-sync start --config ./bs-config.js"
+    "server": "browser-sync start --config ./bs-config.js",
+    "view:tailwind": "tailwind-config-viewer -o -p 7777"
   },
   "dependencies": {
     "next": "10.0.7",
@@ -50,6 +51,7 @@
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.4",
     "prettier": "^2.2.1",
+    "tailwind-config-viewer": "^1.5.0",
     "typescript": "^4.2.2"
   }
 }
