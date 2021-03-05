@@ -1,12 +1,14 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { SEO } from '@src/layouts';
+import { SEO, Layout } from '@src/layouts';
 
 const IndexPage: NextPage = () => {
   return (
     <>
       <SEO title={'タイトル'} description={'説明文'} />
-      <div>本文</div>
+      <Layout>
+        <div>本文</div>
+      </Layout>
     </>
   );
 };
