@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <div className="wrapper">
       <Component {...pageProps} />
     </div>
-    );
+  );
 }
 
 export default MyApp;

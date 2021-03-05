@@ -1,1 +1,1 @@
-export {ExternalLink} from "@src/components/Link/ExternalLink";
+export { ExternalLink } from '@src/components/Link/ExternalLink';
