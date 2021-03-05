@@ -10,7 +10,7 @@ export const Layout: FCX<LayoutPropsType> = ({ className = '', children }) => {
   return (
     <>
       <Header />
-      <main className={`wrapper ${className}`}>{children}</main>
+      <main className={className}>{children}</main>
       <Footer />
     </>
   );
