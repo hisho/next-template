@@ -25,7 +25,8 @@
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.3",
+    "what-input": "^5.2.10"
   },
   "devDependencies": {
     "@types/autoprefixer": "^9.7.2",
