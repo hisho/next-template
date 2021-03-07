@@ -1,2 +1,2 @@
-export { SEO } from './head/SEO';
-export { Layout } from './Layout';
+export { SEO } from '@src/layouts/head/SEO';
+export { Layout } from '@src/layouts/Layout';
