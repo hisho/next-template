@@ -1,9 +1,10 @@
 import { createContext } from 'react';
-import { PageContextState, PageContextAction } from '@src/store/page/type';
+import { PageContextAction } from '@src/store/page/type';
+import { pageDataType } from '@src/configs';
 
 export const PageContext = createContext(
   {} as {
-    page: PageContextState;
+    page: pageDataType;
     dispatch: (nextState: PageContextAction) => void;
   }
 );

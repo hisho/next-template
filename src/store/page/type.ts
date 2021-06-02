@@ -1,8 +1,4 @@
-export type PageContextState = {
-  path: string;
-};
-
 export type PageContextAction = {
-  type: 'increment';
+  type: 'path';
   payload: string;
 };

@@ -1,13 +1,14 @@
 import { Reducer } from 'react';
-import { PageContextState, PageContextAction } from '@src/store/page/type';
+import { PageContextAction } from '@src/store/page/type';
+import { pageDataType } from '@src/configs';
 
-export const PageContextReducer: Reducer<
-  PageContextState,
-  PageContextAction
-> = (prevState, action) => {
+export const PageContextReducer: Reducer<pageDataType, PageContextAction> = (
+  prevState,
+  action
+) => {
   switch (action.type) {
-    case 'increment':
-      return { ...prevState, path: prevState.path + action.payload };
+    case 'path':
+      return { ...prevState, path: action.payload };
     default:
       return prevState;
   }
