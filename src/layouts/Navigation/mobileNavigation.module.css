@@ -1,0 +1,10 @@
+.overlay {
+  @apply z-30;
+  @apply fixed inset-0;
+  @apply w-screen h-screen;
+  @apply cursor-pointer;
+  background: rgba(52, 58, 65, 0.60);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: -1;
+}

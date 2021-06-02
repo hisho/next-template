@@ -1,13 +1,15 @@
-import React, { FCX } from 'react';
+import React, { VFC } from 'react';
+import { MenuButton } from '@src/layouts/Navigation/MenuButton';
+import { CommonPropsType } from '@src/configs';
 
-type HeaderPropsType = Readonly<{
-  children?: never;
-}>;
+type HeaderPropsType = Partial<Pick<CommonPropsType, 'style'>>;
 
-export const Header: FCX<HeaderPropsType> = ({ className = '' }) => {
+export const Header: VFC<HeaderPropsType> = () => {
   return (
     <>
-      <header className={className}>header</header>
+      <header>
+        <MenuButton />
+      </header>
     </>
   );
 };
