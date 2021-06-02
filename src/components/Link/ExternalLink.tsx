@@ -1,17 +1,17 @@
-import { FCX, ReactNode } from 'react';
+import React, { VFC } from 'react';
+import { CommonPropsType } from '@src/configs';
 
-type ExternalLinkType = {
-  href: string;
-  children: ReactNode;
-};
+type ExternalLinkPropsType = Partial<Pick<CommonPropsType, 'className'>> &
+  Pick<CommonPropsType, 'children'> & {
+    href: string;
+  };
 
-export const ExternalLink: FCX<ExternalLinkType> = ({
+export const ExternalLink: VFC<ExternalLinkPropsType> = ({
   href,
   className = '',
   children,
 }) => {
   return (
-    // eslint-disable-next-line react/jsx-no-target-blank
     <a href={href} className={className} rel="noopener" target="_blank">
       {children}
     </a>
