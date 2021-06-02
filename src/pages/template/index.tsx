@@ -4,14 +4,12 @@ import { PageContext } from '@src/store';
 import { usePageReducer } from '@src/hooks';
 
 const IndexPage: React.VFC = () => {
-  const currentPage = usePageReducer('1');
+  const currentPage = usePageReducer('0');
 
   return (
     <PageContext.Provider value={currentPage}>
       <Layout>
         <SEO />
-        top page
-        <img src="/vercel.svg" alt="" />
       </Layout>
     </PageContext.Provider>
   );
