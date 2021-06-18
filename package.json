@@ -20,7 +20,7 @@
     "next-lint": "next lint --dir src --fix",
     "next-export": "next export",
     "server": "browser-sync start --config ./bs-config.js",
-    "prettier": "prettier --write './**/*.{ts,tsx}'",
+    "prettier": "prettier --write './src/**/*.{ts,tsx}'",
     "view:tailwind": "tailwind-config-viewer -o -p 7777"
   },
   "dependencies": {
