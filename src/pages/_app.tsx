@@ -1,3 +1,4 @@
+import '@hisho/reset.css';
 import '@src/styles/globals.css';
 import React from 'react';
 import { AppProps } from 'next/app';
