@@ -1,27 +1,15 @@
-import React, { VFC, useReducer } from 'react';
+import { VFC } from 'react';
 import { Header } from '@src/layouts/Header/Header';
 import { Footer } from '@src/layouts/Footer/Footer';
 import { CommonPropsType } from '@src/configs';
 
-type LayoutPropsType = Partial<Pick<CommonPropsType, 'className'>> &
-  Pick<CommonPropsType, 'children'> &
-  Readonly<{
-    hero?: React.ReactNode;
-  }>;
+type LayoutPropsType = Pick<CommonPropsType, 'children'>;
 
-export const Layout: VFC<LayoutPropsType> = ({
-  hero,
-  className = '',
-  children,
-}) => {
-  const headerHeight = 'var(--header-height)';
-
+export const Layout: VFC<LayoutPropsType> = ({ children }) => {
   return (
     <>
-      <Header style={{ height: headerHeight }} />
-      <div style={{ marginTop: headerHeight }} />
-      {hero}
-      <main className={`wrapper ${className}`}>{children}</main>
+      <Header />
+      <main className={`wrapper`}>{children}</main>
       <Footer />
     </>
   );

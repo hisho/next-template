@@ -1,14 +1,11 @@
-import React, { VFC } from 'react';
-import { CommonPropsType } from '@src/configs';
+import { VFC } from 'react';
 
-type HeaderPropsType = Partial<Pick<CommonPropsType, 'style'>>;
+type HeaderPropsType = {};
 
 export const Header: VFC<HeaderPropsType> = () => {
   return (
     <>
-      <header>
-        header
-      </header>
+      <header>header</header>
     </>
   );
 };

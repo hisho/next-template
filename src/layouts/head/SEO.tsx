@@ -1,11 +1,10 @@
-import React, { VFC, useContext } from 'react';
+import { VFC, useContext } from 'react';
 import Head from 'next/head';
 import { useSEO } from '@src/hooks/useSEO';
 import { PageContext } from '@src/store';
+import { CommonPropsType } from '@src/configs';
 
-type SEOPropsType = {
-  children?: React.ReactNode;
-};
+type SEOPropsType = Partial<Pick<CommonPropsType, 'children'>>;
 
 export const SEO: VFC<SEOPropsType> = ({ children }) => {
   const { page } = useContext(PageContext);
