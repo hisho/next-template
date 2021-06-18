@@ -1,9 +1,9 @@
-import React from 'react';
+import { VFC } from 'react';
 import { Layout, SEO } from '@src/layouts';
 import { PageContext } from '@src/store';
 import { usePageReducer } from '@src/hooks';
 
-const IndexPage: React.VFC = () => {
+const Page: VFC = () => {
   const currentPage = usePageReducer('999999', (page) => ({
     ...page,
     // path: location.pathname,
@@ -50,4 +50,4 @@ const IndexPage: React.VFC = () => {
   );
 };
 
-export default IndexPage;
+export default Page;
