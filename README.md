@@ -1,6 +1,8 @@
 # NEXT TEMPLATE
 # NODE VERSION >=12.13.0 AND USE NPM
 
+## demo [![Netlify Status](https://api.netlify.com/api/v1/badges/023dc8b2-206b-463f-a1b7-5d63b293d905/deploy-status)](https://app.netlify.com/sites/next-template/deploys)
+https://next-template.netlify.app/
 
 ## command
 
