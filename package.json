@@ -34,6 +34,7 @@
     "what-input": "^5.2.10"
   },
   "devDependencies": {
+    "@hisho/reset.css": "^1.0.1",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/browser-sync": "^3001.0.28-alpha",
     "@types/eslint": "^7.2.13",
