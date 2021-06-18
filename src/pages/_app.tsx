@@ -1,15 +1,11 @@
 import '@hisho/reset.css';
 import '@src/styles/globals.css';
-import React from 'react';
+import { VFC } from 'react';
 import { AppProps } from 'next/app';
 import 'what-input';
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  return (
-    <div className="wrapper">
-      <Component {...pageProps} />
-    </div>
-  );
-}
+const MyApp: VFC<AppProps> = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
+};
 
 export default MyApp;
