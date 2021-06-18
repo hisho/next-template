@@ -1,5 +1,5 @@
 import React, { VFC, useContext } from 'react';
-import Head from "next/head";
+import Head from 'next/head';
 import { useSEO } from '@src/hooks/useSEO';
 import { PageContext } from '@src/store';
 

@@ -21,7 +21,6 @@ export const useSEO: useSEOFunctionType = ({
   image = 'common/ogp.png',
   path,
 }) => {
-
   const siteMetaData = useSiteMeta();
   const isTopPage = page_id === '1';
   const pageTitle = isTopPage
