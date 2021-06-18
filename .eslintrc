@@ -1,5 +1,6 @@
 {
-  "extends": "next",
+  "root": true,
+  "extends": ["next","prettier"],
   "rules": {
     "@next/next/no-img-element": "off",
     "react/jsx-no-target-blank": "off"
