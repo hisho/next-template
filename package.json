@@ -17,6 +17,7 @@
     "next-dev": "next dev",
     "next-build": "next build",
     "next-start": "next start",
+    "next-lint": "next lint",
     "next-export": "next export",
     "server": "browser-sync start --config ./bs-config.js",
     "view:tailwind": "tailwind-config-viewer -o -p 7777"
