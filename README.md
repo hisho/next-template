@@ -34,6 +34,12 @@ $ npm run build
 $ npm run export
 ```
 
+### Lint
+
+```shell
+$ npm run lint
+```
+
 ### View Tailwindcss
 
 ```shell script
