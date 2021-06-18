@@ -1,32 +1,29 @@
 import { VFC, useContext } from 'react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import { useSEO } from '@src/hooks/useSEO';
 import { PageContext } from '@src/store';
-import { CommonPropsType } from '@src/configs';
 
-type SEOPropsType = Partial<Pick<CommonPropsType, 'children'>>;
+type SEOPropsType = {};
 
-export const SEO: VFC<SEOPropsType> = ({ children }) => {
+export const SEO: VFC<SEOPropsType> = () => {
   const { page } = useContext(PageContext);
   const SEO = useSEO(page);
   return (
     <>
-      <Head>
-        <html lang={SEO.lang} />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0 " />
-        <meta name="format-detection" content="telephone=no" />
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content={SEO.locale} />
-        <meta property="og:url" content={SEO.path} />
-        <meta property="og:site_name" content={SEO.name} />
-        <meta property="og:title" content={SEO.title} />
-        <meta property="og:description" content={SEO.description} />
-        <meta property="og:image" content={SEO.image} />
-        {children}
-      </Head>
+      <NextSeo
+        title={SEO.title}
+        description={SEO.description}
+        openGraph={{
+          type: 'website',
+          locale: SEO.locale,
+          url: SEO.path,
+          site_name: SEO.name,
+          title: SEO.title,
+          description: SEO.description,
+          images: [{ url: SEO.image }],
+        }}
+        canonical={SEO.path}
+      />
     </>
   );
 };
