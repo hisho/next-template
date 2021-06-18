@@ -1,5 +1,5 @@
 import { VFC } from 'react';
-import { Layout, SEO } from '@src/layouts';
+import { Layout, Head } from '@src/layouts';
 import { PageContext } from '@src/store';
 import { usePageReducer } from '@src/hooks';
 
@@ -12,7 +12,7 @@ const Page: VFC = () => {
   return (
     <PageContext.Provider value={currentPage}>
       <Layout>
-        <SEO />
+        <Head />
         <div className="text-center pt-16 sm:pt-40 pb-14 sm:pb-28">
           <div className="text-primary-black flex justify-center">
             <svg

@@ -1,11 +1,11 @@
 import { VFC, useContext } from 'react';
-import { NextSeo } from 'next-seo';
+import { NextSeo,NextSeoProps } from 'next-seo';
 import { useSEO } from '@src/hooks/useSEO';
 import { PageContext } from '@src/store';
 
-type SEOPropsType = {};
+type HeadPropsType = Omit<NextSeoProps,'title' | 'description' | 'canonical'>;
 
-export const SEO: VFC<SEOPropsType> = () => {
+export const Head: VFC<HeadPropsType> = () => {
   const { page } = useContext(PageContext);
   const SEO = useSEO(page);
   return (

@@ -1,5 +1,5 @@
 import { VFC } from 'react';
-import { Layout, SEO } from '@src/layouts';
+import { Layout, Head } from '@src/layouts';
 import { PageContext } from '@src/store';
 import { usePageReducer } from '@src/hooks';
 
@@ -9,7 +9,7 @@ const Page: VFC = () => {
   return (
     <PageContext.Provider value={currentPage}>
       <Layout>
-        <SEO />
+        <Head />
       </Layout>
     </PageContext.Provider>
   );
