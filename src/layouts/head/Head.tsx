@@ -9,21 +9,19 @@ export const Head: VFC<HeadPropsType> = () => {
   const { page } = useContext(PageContext);
   const SEO = useSEO(page);
   return (
-    <>
-      <NextSeo
-        title={SEO.title}
-        description={SEO.description}
-        openGraph={{
-          type: 'website',
-          locale: SEO.locale,
-          url: SEO.path,
-          site_name: SEO.name,
-          title: SEO.title,
-          description: SEO.description,
-          images: [{ url: SEO.image }],
-        }}
-        canonical={SEO.path}
-      />
-    </>
+    <NextSeo
+      title={SEO.title}
+      description={SEO.description}
+      openGraph={{
+        type: 'website',
+        locale: SEO.locale,
+        url: SEO.path,
+        site_name: SEO.name,
+        title: SEO.title,
+        description: SEO.description,
+        images: [{ url: SEO.image }],
+      }}
+      canonical={SEO.path}
+    />
   );
 };
