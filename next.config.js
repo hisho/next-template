@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  reactStrictMode: true,
   /**
    * @see https://nextjs.org/docs/api-reference/next.config.js/exportPathMap#adding-a-trailing-slash
    */
