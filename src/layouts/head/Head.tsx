@@ -1,9 +1,9 @@
 import { VFC, useContext } from 'react';
-import { NextSeo,NextSeoProps } from 'next-seo';
+import { NextSeo, NextSeoProps } from 'next-seo';
 import { useSEO } from '@src/hooks/useSEO';
 import { PageContext } from '@src/store';
 
-type HeadPropsType = Omit<NextSeoProps,'title' | 'description' | 'canonical'>;
+type HeadPropsType = Omit<NextSeoProps, 'title' | 'description' | 'canonical'>;
 
 export const Head: VFC<HeadPropsType> = () => {
   const { page } = useContext(PageContext);
