@@ -1,16 +1,23 @@
 import { pages, pagesType, pagesPropType, pageObjectType } from '@src/configs';
 
+/**
+ * メモ
+ * 関数型から静的Classかシングルトンに変更するかも
+ */
+
 type getPageType = (
   page_id: pagesPropType['page_id']
 ) => pageObjectType | never;
 type getPagesType = (
   ...page_id: pagesPropType['page_id'][]
 ) => pageObjectType[] | never;
+type isTopPage = (page_id: pagesPropType['page_id']) => boolean;
 
 type usePageType = () => {
   pages: pagesType;
   getPage: getPageType;
   getPages: getPagesType;
+  isTopPage: isTopPage;
 };
 
 export const usePage: usePageType = () => {
@@ -35,9 +42,14 @@ export const usePage: usePageType = () => {
     return currentPages;
   };
 
+  const isTopPage: isTopPage = (page_id) => {
+    return page_id === '1';
+  };
+
   return {
     pages,
     getPage,
     getPages,
+    isTopPage,
   };
 };
