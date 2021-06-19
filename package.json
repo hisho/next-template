@@ -35,6 +35,7 @@
     "@hisho/reset.css": "^1.0.1",
     "@types/browser-sync": "^3001.0.28-alpha",
     "@types/eslint": "^7.2.13",
+    "@types/node": "^15.12.4",
     "@types/postcss-import": "^12.0.0",
     "@types/postcss-nested": "^4.2.3",
     "@types/prettier": "^2.3.0",
