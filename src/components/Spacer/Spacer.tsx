@@ -1,5 +1,5 @@
 import React from 'react';
-import { rem } from '@src/helper';
+import { rem } from '@hisho/utilities';
 import { CommonPropsType } from '@src/configs';
 
 type SpacerPropsType = Partial<Pick<CommonPropsType, 'className'>> & {
