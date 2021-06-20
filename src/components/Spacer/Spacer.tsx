@@ -1,27 +1,29 @@
 import React from 'react';
 import { rem } from '@hisho/utilities';
-import { CommonPropsType } from '@src/configs';
 
-type SpacerPropsType = Partial<Pick<CommonPropsType, 'className'>> & {
-  size?: number | 'auto';
-  style?: Omit<React.CSSProperties, 'height'>;
+type SpacerPropsType = {
+  size: number;
+  axis?: 'vertical' | 'horizontal';
 };
 
 export const Spacer: React.VFC<SpacerPropsType> = ({
-  className = '',
-  style = {},
-  size = 'auto',
+  size,
+  axis = 'vertical',
 }) => {
+  const width = axis === 'vertical' ? rem(1) : rem(size);
+  const height = axis === 'horizontal' ? rem(1) : rem(size);
   return (
     <span
+      aria-hidden="true"
       data-spacer=""
-      aria-hidden={true}
-      className={`block pointer-events-none ${className}`}
       style={{
-        ...{
-          height: size === 'auto' ? 'auto' : rem(size),
-        },
-        ...style,
+        flexShrink: 0,
+        pointerEvents: 'none',
+        display: 'block',
+        width: width,
+        minWidth: width,
+        height: height,
+        minHeight: height,
       }}
     />
   );
