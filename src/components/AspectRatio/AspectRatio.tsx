@@ -1,5 +1,5 @@
 import React, { VFC } from 'react';
-import { percentage } from '@src/helper';
+import { percentage } from '@hisho/utilities';
 import { CommonPropsType } from '@src/configs';
 
 type AspectRatioPropsType = Partial<
