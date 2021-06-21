@@ -1,26 +1,32 @@
-import React, { VFC } from 'react';
+import { VFC, HTMLAttributes, CSSProperties } from 'react';
 import { percentage } from '@hisho/utilities';
 import { CommonPropsType } from '@src/configs';
 
-type AspectRatioPropsType = Partial<
-  Pick<CommonPropsType, 'className' | 'children'>
-> & {
-  width: number;
-  height: number;
-};
+type AspectRatioPropsType = Partial<Pick<CommonPropsType, 'children'>> &
+  Omit<HTMLAttributes<HTMLSpanElement>, 'style'> & {
+    style?: Omit<CSSProperties, 'paddingTop' | 'paddingBottom' | 'padding'>;
+    width: number;
+    height: number;
+  };
 
 export const AspectRatio: VFC<AspectRatioPropsType> = ({
-  className = '',
   children,
   width,
   height,
+  style = {},
+  ...attributes
 }) => {
   return (
-    <div
-      className={className}
-      style={{ paddingTop: percentage(height / width) }}
+    <span
+      aria-hidden={true}
+      style={{
+        paddingTop: percentage(height / width),
+        display: 'block',
+        ...style,
+      }}
+      {...attributes}
     >
       {children}
-    </div>
+    </span>
   );
 };
