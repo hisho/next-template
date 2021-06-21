@@ -1,8 +1,7 @@
-import React from 'react';
-import { CommonPropsType } from '@src/configs';
+import { VFC, HTMLAttributes } from 'react';
 
-type BrPropsType = Partial<Pick<CommonPropsType, 'className' | 'style'>>;
+type BrPropsType = Omit<HTMLAttributes<HTMLBRElement>, 'aria-hidden'>;
 
-export const Br: React.VFC<BrPropsType> = ({ className = '', style = {} }) => {
-  return <br className={className} style={style} aria-hidden={true} />;
+export const Br: VFC<BrPropsType> = (props) => {
+  return <br {...props} aria-hidden={true} data-Br="" />;
 };

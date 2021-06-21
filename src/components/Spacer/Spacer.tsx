@@ -1,4 +1,4 @@
-import React from 'react';
+import { VFC } from 'react';
 import { rem } from '@hisho/utilities';
 
 type SpacerPropsType = {
@@ -6,16 +6,13 @@ type SpacerPropsType = {
   axis?: 'vertical' | 'horizontal';
 };
 
-export const Spacer: React.VFC<SpacerPropsType> = ({
-  size,
-  axis = 'vertical',
-}) => {
+export const Spacer: VFC<SpacerPropsType> = ({ size, axis = 'vertical' }) => {
   const width = axis === 'vertical' ? rem(1) : rem(size);
   const height = axis === 'horizontal' ? rem(1) : rem(size);
   return (
     <span
       aria-hidden="true"
-      data-spacer=""
+      data-Spacer=""
       style={{
         flexShrink: 0,
         pointerEvents: 'none',
