@@ -1,4 +1,4 @@
-import { useSiteMeta } from '@src/hooks/useSiteMeta';
+import {siteMeta} from "@src/configs";
 import { pageDataType } from '@src/configs';
 
 type useSEOType = {
@@ -21,22 +21,21 @@ export const useSEO: useSEOFunctionType = ({
   image = 'common/ogp.png',
   path,
 }) => {
-  const siteMetaData = useSiteMeta();
   const isTopPage = page_id === '1';
   const pageTitle = isTopPage
-    ? siteMetaData.name + ' | ' + title
-    : title + ' | ' + siteMetaData.name;
-  const pageDescription = description ? description : siteMetaData.description;
-  const pagePath = siteMetaData.siteUrl + path;
-  const pageOGPImage = siteMetaData.siteUrl + 'assets/images/' + image;
+    ? siteMeta.name + ' | ' + title
+    : title + ' | ' + siteMeta.name;
+  const pageDescription = description ? description : siteMeta.description;
+  const pagePath = siteMeta.siteUrl + path;
+  const pageOGPImage = siteMeta.siteUrl + 'assets/images/' + image;
 
   return {
-    lang: siteMetaData.lang,
-    locale: siteMetaData.locale,
-    name: siteMetaData.name,
+    lang: siteMeta.lang,
+    locale: siteMeta.locale,
+    name: siteMeta.name,
     title: pageTitle,
     description: pageDescription,
-    url: siteMetaData.siteUrl,
+    url: siteMeta.siteUrl,
     image: pageOGPImage,
     path: pagePath,
   };
