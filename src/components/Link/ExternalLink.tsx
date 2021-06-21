@@ -1,5 +1,5 @@
 import React, { VFC } from 'react';
-import { CommonPropsType } from '@src/configs';
+import { CommonPropsType } from '@src/constants';
 
 type ExternalLinkPropsType = Partial<Pick<CommonPropsType, 'className'>> &
   Pick<CommonPropsType, 'children'> & {

@@ -1,7 +1,7 @@
 import { VFC } from 'react';
 import { Header } from '@src/layouts/Header/Header';
 import { Footer } from '@src/layouts/Footer/Footer';
-import { CommonPropsType } from '@src/configs';
+import { CommonPropsType } from '@src/constants';
 
 type LayoutPropsType = Pick<CommonPropsType, 'children'>;
 
