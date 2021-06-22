@@ -1,12 +1,12 @@
-import {pageDataType} from "@src/configs";
+import {pageType} from "@src/configs";
 import {siteMeta} from "./siteMeta";
 
 export class SEO {
-  private readonly page: pageDataType
+  private readonly page: pageType.pageData
   private readonly isTopPage: boolean;
   private readonly siteMeta = siteMeta;
 
-  constructor(page: pageDataType) {
+  constructor(page: pageType.pageData) {
     this.page = page;
     this.isTopPage = page.page_id === '1';
   }

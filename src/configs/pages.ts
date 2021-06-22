@@ -18,24 +18,3 @@ export const pages = [
     parent_id: '1',
   },
 ] as const;
-
-export type pagesType = typeof pages;
-
-export type pagesPropType = {
-  [Prop in keyof typeof pages[number]]: typeof pages[number][Prop];
-};
-
-export type pageObjectType = typeof pages[number];
-
-export type pageDataType = {
-  page_id: pagesPropType['page_id'];
-  title: string;
-  heading?: {
-    japanese: string;
-    english: string;
-  };
-  description?: string;
-  image?: string;
-  path: string;
-  parent_id?: string;
-};

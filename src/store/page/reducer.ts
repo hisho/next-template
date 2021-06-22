@@ -1,8 +1,8 @@
 import { Reducer } from 'react';
 import { PageContextAction } from '@src/store/page/type';
-import { pageDataType } from '@src/configs';
+import { pageType } from '@src/configs';
 
-export const PageContextReducer: Reducer<pageDataType, PageContextAction> = (
+export const PageContextReducer: Reducer<pageType.pageData, PageContextAction> = (
   prevState,
   action
 ) => {
