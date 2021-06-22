@@ -1,7 +1,7 @@
 import { VFC, useContext } from 'react';
 import { NextSeo, NextSeoProps } from 'next-seo';
 import { PageContext } from '@src/store';
-import {SEO} from "@src/constants";
+import {SEO} from "@src/configs";
 
 type HeadPropsType = Omit<NextSeoProps, 'title' | 'description' | 'canonical'>;
 
