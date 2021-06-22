@@ -1,6 +1,6 @@
 import { VFC, HTMLAttributes, CSSProperties } from 'react';
 import { percentage } from '@hisho/utilities';
-import { CommonPropsType } from '@src/constants';
+import { CommonPropsType } from '@src/configs';
 
 type AspectRatioPropsType = Partial<Pick<CommonPropsType, 'children'>> &
   Omit<HTMLAttributes<HTMLSpanElement>, 'style' | 'aria-hidden'> & {
