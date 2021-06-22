@@ -1,1 +1,0 @@
-export {siteMeta} from './siteMeta';

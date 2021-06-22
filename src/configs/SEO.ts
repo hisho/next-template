@@ -1,5 +1,5 @@
 import {pageDataType} from "@src/configs";
-import {siteMeta} from "@src/constants/siteMeta";
+import {siteMeta} from "./siteMeta";
 
 export class SEO {
   private readonly page: pageDataType

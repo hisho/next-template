@@ -5,7 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
-import {siteMeta} from "@src/constants";
+import {siteMeta} from "@src/configs";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
