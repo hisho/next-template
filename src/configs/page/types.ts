@@ -1,4 +1,4 @@
-import {PAGES} from "@src/configs";
+import { PAGES } from '@src/configs';
 
 //pagesの型
 export type pages = typeof PAGES;

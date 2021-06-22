@@ -1,9 +1,10 @@
-import {PAGES} from "@src/configs";
+import { PAGES } from '@src/configs';
 import * as pageType from './types';
 
 export class Page {
-
-  public static readonly getPage = (page_id: pageType.page_id): pageType.pageObjects | never => {
+  public static readonly getPage = (
+    page_id: pageType.page_id
+  ): pageType.pageObjects | never => {
     const currentPage = PAGES.find((n) => n.page_id === page_id);
     if (!currentPage) {
       throw new Error(`${page_id}は存在しません。`);
@@ -11,7 +12,9 @@ export class Page {
     return currentPage;
   };
 
-  public static readonly getPages = (...page_id: pageType.page_id[]): pageType.pageObjects[] | never => {
+  public static readonly getPages = (
+    ...page_id: pageType.page_id[]
+  ): pageType.pageObjects[] | never => {
     const currentPages = [];
     for (const id of page_id) {
       const currentPage = PAGES.find((n) => n.page_id === id);

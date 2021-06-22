@@ -1,8 +1,8 @@
-import {pageType} from "@src/configs";
-import {SITE_META} from "./siteMeta";
+import { pageType } from '@src/configs';
+import { SITE_META } from './siteMeta';
 
 export class SEO {
-  private readonly page: pageType.pageData
+  private readonly page: pageType.pageData;
   private readonly isTopPage: boolean;
 
   constructor(page: pageType.pageData) {

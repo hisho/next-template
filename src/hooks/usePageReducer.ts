@@ -1,6 +1,6 @@
 import { useReducer, Dispatch } from 'react';
 import { PageContextReducer, PageContextAction } from '@src/store';
-import {Page,pageType} from "@src/configs";
+import { Page, pageType } from '@src/configs';
 
 type usePageReducerType = (
   page_id: pageType.page_id,
