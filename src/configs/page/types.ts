@@ -1,15 +1,15 @@
-import {pages} from "@src/configs";
+import {PAGES} from "@src/configs";
 
 //pagesの型
-export type pages = typeof pages;
+export type pages = typeof PAGES;
 
 //pagesのpropsのユニオン型
 export type pagesProps = {
-  [Prop in keyof typeof pages[number]]: typeof pages[number][Prop];
+  [Prop in keyof typeof PAGES[number]]: typeof PAGES[number][Prop];
 };
 
 //pagesのオブジェクトのユニオン型
-export type pageObjects = typeof pages[number];
+export type pageObjects = typeof PAGES[number];
 
 //page_idのユニオン型
 export type page_id = pagesProps['page_id'];

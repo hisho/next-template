@@ -5,7 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
-import {siteMeta} from "@src/configs";
+import {SITE_META} from "@src/configs";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,7 +16,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang={siteMeta.lang}>
+      <Html lang={SITE_META.lang}>
         <Head>
           <meta name="format-detection" content="telephone=no" />
         </Head>

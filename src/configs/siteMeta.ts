@@ -1,4 +1,4 @@
-export const siteMeta = {
+export const SITE_META = {
   name: 'サイトのタイトル',
   description: 'サイトの説明文',
   lang: 'ja',

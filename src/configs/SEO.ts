@@ -1,10 +1,9 @@
 import {pageType} from "@src/configs";
-import {siteMeta} from "./siteMeta";
+import {SITE_META} from "./siteMeta";
 
 export class SEO {
   private readonly page: pageType.pageData
   private readonly isTopPage: boolean;
-  private readonly siteMeta = siteMeta;
 
   constructor(page: pageType.pageData) {
     this.page = page;
@@ -15,7 +14,7 @@ export class SEO {
    * サイトのタイトルを返すgetter
    */
   get getTitle() {
-    const siteName = this.siteMeta.name;
+    const siteName = SITE_META.name;
     const pageTitle = this.page.title;
     return this.isTopPage
       ? siteName + ' | ' + pageTitle
@@ -26,7 +25,7 @@ export class SEO {
    * サイトのdescriptionを返すgetter
    */
   get getDescription() {
-    const siteDescription = this.siteMeta.description;
+    const siteDescription = SITE_META.description;
     const pageDescription = this.page.description;
     return pageDescription ? pageDescription : siteDescription;
   }
@@ -35,7 +34,7 @@ export class SEO {
    * ページの絶対パスを返すgetter
    */
   get getPath() {
-    return this.siteMeta.siteUrl + this.page.path;
+    return SITE_META.siteUrl + this.page.path;
   }
 
   /**
@@ -43,22 +42,22 @@ export class SEO {
    */
   get getImage() {
     const image = this.page.image ?? 'common/ogp.png';
-    return this.siteMeta.siteUrl + '/assets/images/' + image;
+    return SITE_META.siteUrl + '/assets/images/' + image;
   }
 
   get getUrl() {
-    return this.siteMeta.siteUrl;
+    return SITE_META.siteUrl;
   }
 
   get getLang() {
-    return this.siteMeta.lang;
+    return SITE_META.lang;
   }
 
   get getLocale() {
-    return this.siteMeta.locale;
+    return SITE_META.locale;
   }
 
   get getName() {
-    return this.siteMeta.name;
+    return SITE_META.name;
   }
 }

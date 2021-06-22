@@ -1,4 +1,4 @@
-export const pages = [
+export const PAGES = [
   {
     page_id: '0',
     title: 'テンプレート',

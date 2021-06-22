@@ -5,7 +5,7 @@ require('ts-node').register({
     target: 'esnext',
   },
 });
-const { variables } = require('../src/configs/variables');
+const { VARIABLES } = require('../src/configs/variables');
 const _ = require('lodash');
 /* eslint-disable @typescript-eslint/no-var-requires */
 
@@ -26,7 +26,7 @@ const createSafeList = (...names) => {
   return names.flatMap((name) => {
     return [
       name,
-      ...Object.keys(variables.breakpoints).map((n) => `${n}:${name}`),
+      ...Object.keys(VARIABLES.breakpoints).map((n) => `${n}:${name}`),
     ];
   });
 };
@@ -35,5 +35,5 @@ module.exports = {
   customizeObject,
   rangeObject,
   createSafeList,
-  variables,
+  variables: VARIABLES,
 };

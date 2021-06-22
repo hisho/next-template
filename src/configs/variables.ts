@@ -1,4 +1,4 @@
-export const variables = {
+export const VARIABLES = {
   breakpoints: {
     xs: 600,
     sm: 769,
@@ -25,6 +25,6 @@ export const variables = {
   },
 } as const;
 
-export type variablesType = typeof variables;
+export type variablesType = typeof VARIABLES;
 
 export type breakpointsNamesType = keyof variablesType['breakpoints'];
