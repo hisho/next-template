@@ -13,8 +13,8 @@ const Page: VFC = () => {
     <PageContext.Provider value={currentPage}>
       <Layout>
         <Head />
-        <div className="text-center pt-16 sm:pt-40 pb-14 sm:pb-28">
-          <div className="text-primary-black flex justify-center">
+        <div className="pt-16 pb-14 text-center sm:pt-40 sm:pb-28">
+          <div className="flex justify-center text-primary-black">
             <svg
               className="mx-auto"
               xmlns="http://www.w3.org/2000/svg"
@@ -31,16 +31,16 @@ const Page: VFC = () => {
             </svg>
           </div>
 
-          <p className="font-bold text-18 sm:text-24 mt-14 sm:mt-28">
+          <p className="mt-14 text-18 font-bold sm:mt-28 sm:text-24">
             お探しのページは見つかりませんでした
           </p>
-          <p className="font-medium leading-1.5 mt-9 sm:mt-18">
+          <p className="mt-9 font-medium leading-1.5 sm:mt-18">
             お探しのページはすでに削除されている・公開期間が終わっている・
             <br className="hidden sm:block" />
             アクセスしたアドレスが異なっているなどの理由で見つかりませんでした。
           </p>
           <div className="mt-17 sm:mt-34">
-            <div className="font-medium underline inline-block hover:primary">
+            <div className="inline-block font-medium underline">
               ホームへ戻る
             </div>
           </div>
